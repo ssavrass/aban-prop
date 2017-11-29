@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+  <!--*********-->
+
+{% if request.user.is_superuser %}
+
+<h3> Approve Properties! </h3>
+
+<!-- <form action="" name="approve" method="post">
+<label for="choices">
+	{% csrf_token %}
+	{{ form.as_p }}
+  
+	{% for result in results %}
+   
+  <li><input type="checkbox" id= "{result.id}"> <a href="/propertiessubmit/details/{{result.id}}" style="font-family: monospace;"><label for="{{result.id}}">
+  {{ result.title }} {{result.address}} {{result.description}} </label> </li></a>
+
+	{% endfor %}
+  
+	<input type="submit" class="btn btn-default" name="approve" value= "Approve Selected Properties">
+	<input type="submit" class="btn btn-default" name="delete" value= "Delete Selected Properties">
+
+</label></form> -->
+
+
+<form method="post">
+
+	{% csrf_token %}
+	{{ form.as_p }}
+  
+  
+	<input type="submit" class="btn btn-warning" name="approve" value= "Approve Selected Properties">
+	<input type="submit" class="btn btn-warning" name="delete" value= "Delete Selected Properties">
+
+</form>  
+<p></p>
+<h4> Edit Properties </h4>
+
+{% for result in results %}
+   
+  <p><a href="/propertiessubmit/details/{{result.id}}" style="font-family: monospace;"><label for="{{result.id}}">
+  {{ result.title }} {{result.address}} {{result.description}} {{result.lat}} {{result.lon}} </label> </p></a>
+
+	{% endfor %}
+
+{% else %}
+
+<h3>Access Denied!</h3>
+
+
+{% endif %}
+
+    
+
+
+{% endblock %}
