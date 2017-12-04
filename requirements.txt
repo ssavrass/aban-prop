@@ -40,7 +40,6 @@ Fabric==1.13.2
 funcsigs==0.4
 future==0.16.0
 geopy==1.11.0
-gyp==0.1
 html5lib==0.999
 idna==2.5
 imagesize==0.7.1
