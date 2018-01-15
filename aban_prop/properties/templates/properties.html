@@ -27,7 +27,7 @@
  
  <div id="map"></div>
 {% if user.is_authenticated %}
- <h3> Submit abandoned property! </h3>
+ <h3 style="color:blue; padding-left: 10%;"> Submit abandoned property! </h3>
 
 
 <form name="addprop" class="well form-horizontal" onsubmit="return validateForm()" method="post" enctype="multipart/form-data">
@@ -36,7 +36,7 @@
 		
 		
 
-        
+        <div style="padding-left: 10%;">
           <div class="form-group">
             <label class="col-md-4 control-label">Title:</label>  
               <div class="col-md-4 inputGroupContainer">
@@ -85,7 +85,7 @@
             <button type="submit" class="btn btn-warning" >Submit Property! </button>
           </div>
         </div>
-
+      </div>
        
         
         
