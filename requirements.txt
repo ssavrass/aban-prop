@@ -71,7 +71,7 @@ PyJWT==1.5.2
 pymongo==3.4.0
 python-openid==2.2.5
 pytz==2017.2
-PyYAML==3.11
+PyYAML==5.4
 requests==2.18.1
 requests-oauthlib==0.8.0
 sh==1.12.14
